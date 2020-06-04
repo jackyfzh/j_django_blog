@@ -1,0 +1,16 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    友链
+{% endblock title %}
+
+{% block content %}
+<br>
+    <h4>友链</h4><hr>
+    {% for friend in friends %}
+    <h5><a href="{{ friend.path }}">{{ friend.title }}</a></h5>
+    <p>{{ friend.main | safe }}</p><hr>
+    {% endfor %}
+{% endblock content %}

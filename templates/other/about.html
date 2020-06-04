@@ -1,0 +1,113 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    关于
+{% endblock title %}
+
+{% block content %}
+<br>
+<div class="media border p-3">
+    <div class="media-body">
+        <h2>Jackyfeng</h2>
+        大家好,我是<em>Jacky</em>,
+        <br><strong>Python爱好者</strong>一名,
+        <br>欢迎来到<em><strong>我的博客</strong>.</em>
+    </div>
+    <img src="{% static 'img/about.jpg' %}"
+        alt="about" 
+        style="max-width:100%; 
+        border-radius: 20px ;
+        width: 200px ;height: 120px;"
+        ><br>
+</div>
+    <h4>技能</h4>
+    <h5 style="color: seagreen;">1,编程</h5>
+    <div class="progress">
+        <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width:60%">
+            Python
+        </div>
+        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:20%">
+            Html
+        </div>
+        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width:10%">
+            JavaScript
+        </div>
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:10%">
+            Scratch
+        </div>
+    </div>
+    <h5 style="color: rgba(26, 150, 207, 0.815);">2,学习能力</h5>
+    <div class="progress">
+        <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width:25%">
+            数学
+        </div>
+        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:30%">
+            英语
+        </div>
+        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width:25%">
+            语文
+        </div>
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:8%">
+            音体美
+        </div>
+        <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" style="width:12%">
+            其他
+        </div>
+    </div>
+    <h5 style="color: rgba(225, 240, 18, 0.829);">3,闲暇</h5>
+    <div class="progress">
+        <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width:40%">
+            编程
+        </div>
+        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:30%">
+            看书
+        </div>
+        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width:20%">
+            运动
+        </div>
+        <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" style="width:10%">
+            其他
+        </div>
+    </div>
+    <hr>
+    <h4>联系方式</h4>
+    <i class="zi zi_tmQq" zico="qq" style="color:royalblue;"></i>
+    435537581 (推荐)<br>
+    <i class="zi zi_phone" zico="话筒黑" style="color: teal;"></i>
+    19945691086<br>
+    <i class="zi zi_envelope" zico="信封" style="color: mediumpurple;"></i>
+    Jackyfeng201314@163.com<br>
+    <i class="zi zi_tmWeibo" zico="微博" style="color: brown;"></i>
+    @Jacky-生活的乐趣 (不推荐)<br>
+    <hr>
+    <h4>赞赏</h4>
+    <div class="media border p-3">
+        <div class="media-body">
+            <div class="container">
+                <p style="color: cadetblue;"><strong>8元赞赏码</strong></p>
+            </div>
+            <img src="{% static 'img/8.jpg' %}" alt="8" style="width: 300px;height:300px ;">
+            <div class="container">
+                <p style="color: cadetblue;"><strong>18元赞赏码</strong></p>
+            </div>
+            <img src="{% static 'img/18.jpg' %}" alt="18" style="width: 300px;height:300px ;">
+            <div class="container">
+                <p style="color: cadetblue;"><strong>28元赞赏码</strong></p>
+            </div>
+            <img src="{% static 'img/28.jpg' %}" alt="28" style="width: 300px;height:300px ;">
+            <div class="container">
+                <p style="color: cadetblue;"><strong>68元赞赏码</strong></p>
+            </div>
+            <img src="{% static 'img/68.jpg' %}" alt="68" style="width: 300px;height:300px ;">
+            <div class="container">
+                <p style="color: cadetblue;"><strong>88元赞赏码</strong></p>
+            </div>
+            <img src="{% static 'img/88.jpg' %}" alt="88" style="width: 300px;height:300px ;">
+        </div>
+        <div>
+        <h3 style="color: chocolate;">各位大侠,快来"赠人玫瑰"吧<br>让博主知道,好多人在支持我!</h3>
+        </div>
+    </div>
+{% endblock content %}

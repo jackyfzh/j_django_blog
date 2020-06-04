@@ -1,0 +1,76 @@
+{% extends "base.html" %} 
+{% load staticfiles %}
+{% block title %} 编写文章 {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <br>
+            <!-- 提交文章的表单 -->
+            <form method="post" action="." enctype="multipart/form-data">
+                <!-- Django中需要POST数据的地方都必须有csrf_token -->
+                {% csrf_token %}
+                <!-- 文章标题 -->
+                <div class="form-group">
+                    <!-- 标签 -->
+                    <label for="title">文章标题</label>
+                    <!-- 文本框 -->
+                    <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <!-- 文章标题图 -->
+                <div class="form-group">
+                <label for="avatar">标题图</label>
+                <input type="file" class="form-control-file" name="avatar" id="avatar">
+                <small style="color: brown;">注意：标题图不可更改！</small>
+                </div>
+                <!-- 文章栏目 -->
+                <div class="form-group">
+                <label for="column">栏目</label>
+                <select class="form-control" 
+                    id="column" 
+                    name="column"
+                >
+                <option value="none">请选择栏目..</option>
+                {% for column in columns %}
+                    <option value="{{ column.id }}">{{ column }}</option>
+                {% endfor %}
+                </select>
+                </div>
+                <!-- 文章摘要 -->
+                <div class="form-group">
+                <!-- 标签 -->
+                <div class="form-group">
+                <label for="tags">标签</label>
+                <input type="text" 
+                    class="form-control col-3" 
+                    id="tags" 
+                    name="tags"
+                >
+                <!-- 标签 -->
+                <div class="form-group">
+                    <label for="belongs">所属教程</abel>
+                    <input type="text" 
+                        class="form-control" 
+                        id="belongs" 
+                        name="belongs"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="main">文章摘要</label>
+                    <!-- 文本框 -->
+                    <input type="text" class="form-control" id="main" name="main">
+                </div>
+                <!-- 文章正文 -->
+                <div class="form-group">
+                    <label for="body">文章正文</label>
+                    <!-- 文本区域 -->
+                    <textarea type="text" class="form-control" id="body" name="body" rows="12"></textarea>
+                </div>
+                <!-- 提交按钮 -->
+                <button type="submit" class="btn btn-primary">完成</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}
