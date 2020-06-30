@@ -25,7 +25,7 @@ SECRET_KEY = '!69dhzu+-!=!!e)+#gzapaov^uu-l4796-v5_i4+klck%d(+of'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['81.68.109.155']
+ALLOWED_HOSTS = ['81.68.109.155','jackypy.xyz']
 
 
 # Application definition

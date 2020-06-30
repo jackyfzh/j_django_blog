@@ -6,5 +6,5 @@ def about(request):
 
 def friends(request):
     friends = Friend.objects.all()
-    contact = {"friends" : friends}
-    return render(request, "other/friend.html",contact)
+    contaxt = {"friends" : friends}
+    return render(request, "other/friend.html",contaxt)
