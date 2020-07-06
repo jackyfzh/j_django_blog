@@ -138,17 +138,25 @@ def article_create(request):
         # 返回模板
         return render(request, 'article/create.html', context)
 
-def article_delete(request, id): # 删除文章
+# 删除文章
+@login_required(login_url='/userprofile/login/')
+def article_delete(request, id):
     # 根据 id 获取需要删除的文章
     article = ArticlePost.objects.get(id=id)
+    # 过滤非作者的用户
+    if request.user != article.author:
+        return HttpResponse("抱歉，你无权修改这篇文章。")
     # 调用.delete()方法删除文章
     article.delete()
     # 完成删除后返回文章列表
     return redirect("article:article_list")
 
+@login_required(login_url='/userprofile/login/')
 def article_update(request, id): # 更新文章
     # 获取需要修改的具体文章对象
     article = ArticlePost.objects.get(id=id)
+    if request.user != article.author:
+        return HttpResponse("抱歉，你无权修改这篇文章。")
     # 判断用户是否为 POST 提交表单数据
     if request.method == "POST":
         # 将提交的数据赋值到表单实例中
