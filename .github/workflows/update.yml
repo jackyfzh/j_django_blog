@@ -20,9 +20,11 @@ jobs:
         cd /home/jackyfeng/j_blogs
         source env/bin/activate
         cd j_django_blog
-     - name: Update files
+        
+    - name: Update files
       run: |
         git pull orgin master
+        
      - name: Restart server
       run: |
         python3 manage.py collectstatic
@@ -30,6 +32,7 @@ jobs:
         sudo service nginx restart
         pkill gunicorn
         gunicorn --bind unix:/tmp/jackypy.xyz.socket j_django_blog.wsgi:application
+        
       - name: Other things
       run: |
         cd ../time_plan_design
