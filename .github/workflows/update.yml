@@ -24,8 +24,8 @@ jobs:
     - name: Update files
       run: |
         git pull orgin master
-        
-     - name: Restart server
+       
+    - name: Restart server
       run: |
         python3 manage.py collectstatic
         python3 manage.py migrate
@@ -33,7 +33,7 @@ jobs:
         pkill gunicorn
         gunicorn --bind unix:/tmp/jackypy.xyz.socket j_django_blog.wsgi:application
         
-      - name: Other things
+    - name: Other things
       run: |
         cd ../time_plan_design
         gunicorn --bind unix:/tmp/timeplan.jackypy.xyz.socket time_plan_design.wsgi:application
