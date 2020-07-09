@@ -19,11 +19,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 import notifications.urls
 
-admin.site.site_title = '网站后台'
+admin.site.site_title = '博客网站后台'
 admin.site.site_header = 'Jacky的个人网站后台'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('jackypy/background', admin.site.urls),
     path('', include('article.urls', namespace='article')),
     path('userprofile/', include('userprofile.urls', namespace='userprofile')),
     path('comment/', include('comment.urls', namespace='comment')),
