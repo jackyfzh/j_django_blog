@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['81.68.109.155','jackypy.xyz']
 # Application definition
 
 INSTALLED_APPS = [
+    'simpleui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,7 +47,6 @@ INSTALLED_APPS = [
     'comment',
     'other',
     'notice',
-    'simpleui',
 ]
 
 MIDDLEWARE = [
