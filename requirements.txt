@@ -2,7 +2,7 @@ alembic==1.4.2
 asgiref==3.2.7
 Babel==2.8.0
 click==7.1.2
-Django==2.2
+Django==2.2.13
 django-ckeditor==5.9.0
 django-js-asset==1.2.2
 django-mdeditor==0.1.18
