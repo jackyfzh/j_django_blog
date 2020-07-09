@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 import notifications.urls
 urlpatterns = [
-    path('jackypy/background', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('article.urls', namespace='article')),
     path('userprofile/', include('userprofile.urls', namespace='userprofile')),
     path('comment/', include('comment.urls', namespace='comment')),
