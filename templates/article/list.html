@@ -68,9 +68,11 @@
                             {% if article.column.title == '闲聊' %}
                                 btn-success
                             {% elif article.column.title == '编程' %}
-                                btn-danger
-                            {% elif article.column.title == '其他' %}
+                                btn-primary
+                            {% elif article.column.title == '学习' %}
                                 btn-warning
+                            {% elif article.column.title == '其他' %}
+                                btn-secondary
                             {% endif %}
                         "
                     >
@@ -135,7 +137,6 @@
             </div>
             <hr style="width: 100%;"/>
         {% endfor %}
-        <div class="col-3">
         <div class="card mb-4 hvr-glow" style="display: flex">
             <div class="card-body">
                 <p class="card-title text-muted">
@@ -143,7 +144,7 @@
                 </p>
                 djjdjdjdjdjdjd
             </div>
-        </div>
+        
     </div>
     </div>
 
