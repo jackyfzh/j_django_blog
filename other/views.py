@@ -8,3 +8,6 @@ def friends(request):
     friends = Friend.objects.all()
     contaxt = {"friends" : friends}
     return render(request, "other/friend.html",contaxt)
+
+def blog_comment(request):
+    return render(request, "other/comment.html")
