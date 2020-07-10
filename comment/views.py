@@ -25,7 +25,7 @@ def post_comment(request, article_id, parent_comment_id=None):
             notify.send(
                     request.user,
                     recipient=new_comment.user,
-                    verb='评论了你的文章',
+                    verb='评论了文章',
                     target=article,
                     action_object=new_comment,
                 )
@@ -33,10 +33,10 @@ def post_comment(request, article_id, parent_comment_id=None):
                 notify.send(
                     request.user,
                     recipient=User.objects.filter(is_superuser=1),
-                    verb='回复了你',
+                    verb='评论了文章',
                     target=article,
                     action_object=new_comment,
-                )
+                 )
             return redirect(article)
         else:
             return HttpResponse("表单内容有误，请重新填写。")
