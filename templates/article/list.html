@@ -5,7 +5,7 @@
 
 <!-- 写入 base.html 中定义的 title -->
 {% block title %}
-    首页
+    Jacky的个人网站
 {% endblock title %}
 
 <!-- 写入 base.html 中定义的 content -->
@@ -13,6 +13,9 @@
 
 <!-- 定义放置文章标题的div容器 -->
 <div class="container">
+    <div class="row">
+    <div class="container">
+    <div class="col">
     <!-- 面包屑导航 -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -33,6 +36,17 @@
             </li>
         </ol>
     </nav>
+    </div>
+    <div class="card mb-4 hvr-glow col" style="display: flex">
+        <div class="card-body">
+            <p class="card-title text-muted">
+                <i class="fas fa-link" style="color: lightpink;"></i> 友情链接
+            </p>
+            djjdjdjdjdjdjd
+        </div>
+    </div>
+    </div>
+    </div>
     <!-- 搜索提示语 -->
     {% if search %}
         {% if articles %}
@@ -137,16 +151,6 @@
             </div>
             <hr style="width: 100%;"/>
         {% endfor %}
-        <div class="col">
-        <div class="card mb-4 hvr-glow" style="display: flex">
-            <div class="card-body">
-                <p class="card-title text-muted">
-                    <i class="fas fa-link" style="color: lightpink;"></i> 友情链接
-                </p>
-                djjdjdjdjdjdjd
-            </div>
-        </div>
-    </div>
     </div>
 
     <!-- 页码导航 -->
