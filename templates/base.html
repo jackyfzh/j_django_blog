@@ -59,6 +59,18 @@
     <!-- 引入layer.js -->
     <script src="{% static 'layer-v3.1.1/layer/layer.js' %}"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.6.2/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: '5712fc9d3c3d186a514e', // GitHub Application Client ID
+            clientSecret: '35c3c5995406f6ab12c818cf3eb73c4541741c1f', // GitHub Application Client Secret
+            repo: 'j_django_blog'      // 存放评论的仓库
+            owner: 'jackyfzh',          // 仓库的创建者，
+            admin: ['jackyfzh'],        // 如果仓库有多个人可以操作，那么在这里以数组形式写出
+            id: location.pathname,      // 用于标记评论是哪个页面的，确保唯一，并且长度小于50
+        })
+        
+        gitalk.render('gitalk-container');    // 渲染Gitalk评论组件
+        </script>
     {% include 'back_to_top_func.html' %}
     {% block script %}{% endblock script %}
     <style>
