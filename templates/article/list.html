@@ -130,6 +130,9 @@
                         <a href="{% url 'article:article_detail' article.id %}"
                            style="color: black;" 
                         >
+                            {% if article.belongs %}
+                            {{ article.belongs }}:
+                            {% endif %}
                             {{ article.title }}
                         </a>
                     </b>
