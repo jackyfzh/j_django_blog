@@ -44,9 +44,10 @@
                 <p class="card-title text-muted">
                     <i class="zi zi_bell" zico="铃铛" style="color: deepskyblue;"></i> 博主动态
                 </p>
-                    a
+                {% for m in ms %}
+                {{ m.content }}
                 <p class="cark-text card-title text-muted mb-0 text-right">a</p>
-                
+                {% endfor %}
             </div>
         </div>
         </div>
