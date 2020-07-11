@@ -18,8 +18,10 @@ class Comment(models.Model): # 博文评论
     )
     body = RichTextField()
     created = models.DateTimeField(auto_now_add=True)
+
     class Meta:
         ordering = ('-created',)
+        verbose_name_plural = '评论'
         
     def __str__(self):
         return self.body[:20]

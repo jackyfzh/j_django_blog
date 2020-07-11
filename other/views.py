@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Friend
+from .models import Friend, SiteMessage
 # Create your views here.
 def about(request):
     return render(request, "other/about.html")
@@ -11,3 +11,8 @@ def friends(request):
 
 def blog_comment(request):
     return render(request, "other/comment.html")
+
+def messages(request):
+    messages = Friend.objects.last()
+    contact = {"messages" : messages}
+    return render(request, "article/list.html",contact)

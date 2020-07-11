@@ -21,6 +21,9 @@ class ArticleColumn(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name_plural = '文章栏目'
+
 class ArticlePost(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE) # 作者
     # 文章栏目的 “一对多” 外键
@@ -59,6 +62,7 @@ class ArticlePost(models.Model):
 
     class Meta:
         ordering = ("-created",) # 文章排序方式
+        verbose_name_plural = '文章'
     
     def __str__(self):
         return self.title
