@@ -45,7 +45,7 @@
                     <i class="zi zi_bell" zico="铃铛" style="color: deepskyblue;"></i> 博主动态
                 </p>
                 {% for message in messages %}
-                {{ message.content }}
+                    {{ message.content }}
                 <p class="cark-text card-title text-muted mb-0 text-right">{{ message.created }}</p>
                 {% endfor %}
             </div>
