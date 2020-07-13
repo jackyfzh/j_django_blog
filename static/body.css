@@ -4,10 +4,3 @@ body {
     background-color:#fff;
     font-family:"微软雅黑","黑体","宋体";
 }
-
-img {
-    height: 120px;
-    width: 200px;
-    border-radius: 20px;
-    max-width: 100%;
-}
