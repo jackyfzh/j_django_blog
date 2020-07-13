@@ -14,5 +14,5 @@ def blog_comment(request):
 
 def messages(request):
     messages = Friend.objects.last()
-    contact = {"ms" : messages}
-    return render(request, "article/list.html",contact)
+    contaxt = {"ms" : messages}
+    return render(request, "article/list.html",contaxt)
