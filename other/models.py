@@ -22,7 +22,7 @@ class Friend(models.Model):
 
 class SiteMessage(models.Model):
     content = models.TextField()
-    created = modle.DateTimeField(default=timezone.now)
+    created = models.DateTimeField(default=timezone.now)
 
     class Meta:
         verbose_name_plural = '全站公告'
