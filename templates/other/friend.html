@@ -10,7 +10,7 @@
 <br>
     <h4>友链</h4><hr>
     {% for friend in friends %}
-    <h5><a href="{{ friend.path }}">{{ friend.title }}</a></h5>
+    <h5><a href="{{ friend.path }}" target="view_window">{{ friend.title }}</a></h5>
     <p>{{ friend.main | safe }}</p><hr>
     {% endfor %}
     <br><br>
