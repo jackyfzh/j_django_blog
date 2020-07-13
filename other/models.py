@@ -20,8 +20,9 @@ class Friend(models.Model):
     def __str__(self):
         return self.title
 
-class SiteMessage(TimeStampedModel):
-    content = models.TextField(verbose_name="正文")
+class SiteMessage(models.Model):
+    content = models.TextField()
+    created = modle.DateTimeField(default=timezone.now)
 
     class Meta:
         verbose_name_plural = '全站公告'
