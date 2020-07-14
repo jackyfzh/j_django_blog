@@ -5,11 +5,11 @@ from model_utils.models import TimeStampedModel
 # Create your models here.
 class Friend(models.Model):
     # 标题
-    title = models.CharField(max_length=50, blank=True)
+    title = models.CharField(max_length=50)
     # 网址
-    path = models.CharField(max_length=100, blank=True)
+    path = models.CharField(max_length=100)
     # 简介
-    main = RichTextField(max_length=500, blank=True)
+    main = RichTextField(max_length=500)
     # 创建时间
     created = models.DateTimeField(default=timezone.now)
 
@@ -26,6 +26,17 @@ class SiteMessage(models.Model):
 
     class Meta:
         verbose_name_plural = '全站公告'
+
+    def __str__(self):
+        return self.content[:20]
+
+class Timeplan(models.Model):
+    author = modles.CharField(max_length=10000, blank=True, default="Jacky")
+    content = models.TextField()
+    path = models.CharField(max_length=10000, blank=True)
+
+    class Meta:
+        verbose_name_plural = '网站归档'
 
     def __str__(self):
         return self.content[:20]
