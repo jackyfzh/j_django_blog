@@ -14,5 +14,5 @@ def blog_comment(request):
 
 def messages(request):
     messages = SiteMessage.objects.all().last()
-    contaxt = {"ms" : messages}
+    contaxt = {"message" : messages}
     return render(request, "article/list.html",contaxt)
