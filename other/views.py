@@ -17,7 +17,7 @@ def messages(request):
     contaxt = {"messages" : messages}
     return render(request, "article/list.html",contaxt)
 '''
-def timeplan(request):
+def timeline(request):
     plans = Timeplan.objects.all()
     contaxt = {"plans" : plans}
     return render(request, "other/timeline.html",contaxt)

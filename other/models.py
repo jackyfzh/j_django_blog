@@ -30,7 +30,7 @@ class SiteMessage(models.Model):
     def __str__(self):
         return self.content[:20]
 
-class Timeplan(models.Model):
+class Timeline(models.Model):
     author = models.CharField(max_length=10000, blank=True, default="Jacky")
     content = models.TextField()
     path = models.CharField(max_length=10000, blank=True)
