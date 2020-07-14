@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Friend, SiteMessage, Timeplan
+from .models import Friend, SiteMessage, Timeline
 # Create your views here.
 def about(request):
     return render(request, "other/about.html")
