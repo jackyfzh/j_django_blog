@@ -44,6 +44,7 @@
                 <p class="card-title text-muted">
                     <i class="zi zi_bell" zico="铃铛" style="color: deepskyblue;"></i> 博主动态
                 </p>
+                {% for message in messages %}
                 {{ message.content }}
                 <p class="cark-text card-title text-muted mb-0 text-right">{{ message.created }}</p>
             </div>
