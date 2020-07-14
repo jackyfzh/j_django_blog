@@ -18,6 +18,6 @@ def messages(request):
     return render(request, "article/list.html",contaxt)
 '''
 def timeline(request):
-    plans = Timeline.objects.all()
-    contaxt = {"plans" : plans}
+    ts = Timeline.objects.all()
+    contaxt = {"ts" : ts}
     return render(request, "other/timeline.html",contaxt)

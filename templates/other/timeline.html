@@ -7,4 +7,18 @@
 {% endblock title %}
 
 {% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            {% for t in ts %}
+            {{ t.created }} -- @ {{ t.author }}&nbsp;&nbsp;&nbsp;
+            {% if t.path %}
+            <a href="{{ t.path }}">{{ t.content }}</a>
+            {% else %}
+            {{ t.content }}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock content %}
