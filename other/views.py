@@ -13,6 +13,6 @@ def blog_comment(request):
     return render(request, "other/comment.html")
 
 def messages(request):
-    messages = Friend.objects.last()
+    messages = Friend.objects.all().last()
     contaxt = {"ms" : messages}
     return render(request, "article/list.html",contaxt)
