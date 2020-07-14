@@ -31,7 +31,7 @@ class SiteMessage(models.Model):
         return self.content[:20]
 
 class Timeplan(models.Model):
-    author = modles.CharField(max_length=10000, blank=True, default="Jacky")
+    author = models.CharField(max_length=10000, blank=True, default="Jacky")
     content = models.TextField()
     path = models.CharField(max_length=10000, blank=True)
 
