@@ -34,6 +34,7 @@ class Timeline(models.Model):
     author = models.CharField(max_length=10000, blank=True, default="Jacky")
     content = models.TextField()
     path = models.CharField(max_length=10000, blank=True)
+    created = models.DateField(default=timezone.now)
 
     class Meta:
         ordering = ('-created',)
