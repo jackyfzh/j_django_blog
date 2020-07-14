@@ -13,6 +13,6 @@ def blog_comment(request):
     return render(request, "other/comment.html")
 
 def messages(request):
-    messages = SiteMessage.objects.all().last()
+    messages = SiteMessage.objects.all().first()
     contaxt = {"message" : messages}
     return render(request, "article/list.html",contaxt)
