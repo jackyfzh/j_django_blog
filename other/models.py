@@ -36,6 +36,7 @@ class Timeline(models.Model):
     path = models.CharField(max_length=10000, blank=True)
 
     class Meta:
+        ordering = ('-created',)
         verbose_name_plural = '网站归档'
 
     def __str__(self):
