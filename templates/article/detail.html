@@ -67,6 +67,27 @@
                     will-change: position, transform;
                 }
             </style>
+            <!-- 相邻文章导航 -->
+<div class="row justify-content-end">
+    {% if next_article %}
+    <div class="col-auto mr-auto">
+        <a  href="{{ next_article.get_absolute_url }}" 
+            class="btn btn-info"
+            >
+            {{ next_article.title }}
+        </a>
+    </div>
+    {% endif %}
+{% if pre_article %}
+    <div class="col-auto">
+        <a  href="{{ pre_article.get_absolute_url }}" 
+        class="btn btn-info" 
+        >
+            {{ pre_article.title }}
+        </a>
+    </div>
+{% endif %}
+</div>
             <div style="text-align:center;" class="mt-4">
                 <button class="btn btn-outline-danger"
                         type="button"
@@ -141,29 +162,6 @@
 </div>
         </div>
     </div>
-<!-- 相邻文章导航 -->
-<div class="row justify-content-end">
-    {% if next_article %}
-    <div class="col-auto mr-auto">
-        <a  href="{{ next_article.get_absolute_url }}" 
-            class="btn btn-info"
-            >
-            <i class="zi zi_forLeft" zico="左指"></i>
-            {{ next_article.title }}
-        </a>
-    </div>
-    {% endif %}
-{% if pre_article %}
-    <div class="col-auto">
-        <a  href="{{ pre_article.get_absolute_url }}" 
-        class="btn btn-info" 
-        >
-            {{ pre_article.title }}
-            <i class="zi zi_forRight" zico="右指"></i>
-        </a>
-    </div>
-{% endif %}
-</div>
     <script>
         // 删除文章的函数
         function confirm_delete() {
@@ -187,6 +185,11 @@
 <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
 <link rel="stylesheet" href="{% static 'prism/prism.css' %}">
 <script src="{% static 'sticky_sidebar/jquery.sticky-sidebar.min.js' %}"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 <script type="text/javascript">
     $('#sidebar').stickySidebar({
         topSpacing: 20,
