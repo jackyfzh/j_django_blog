@@ -197,7 +197,11 @@
 <script>
     $(".django-ckeditor-widget").removeAttr('style');
 </script>
-
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 <script src="{% static 'csrf.js' %}"></script>
 <script>
     // 点赞功能主函数
