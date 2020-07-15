@@ -68,26 +68,29 @@
                 }
             </style>
             <!-- 相邻文章导航 -->
-<div class="row justify-content-end">
-    {% if next_article %}
-    <div class="col-auto mr-auto">
-        <a  href="{{ next_article.get_absolute_url }}" 
-            class="btn btn-info"
+            {% if pre_article %}
+            <div class="col-auto">
+                <a  href="{{ pre_article.get_absolute_url }}" 
+                class="btn btn-info" 
+                data-toggle="tooltip" data-placement="top" title="{{ pre_article.title}}"
+                >
+                    上一篇
+                </a>
+            </div>
+        {% endif %}
+        <div class="row justify-content-end">
+        {% if next_article %}
+        <div class="col-auto mr-auto">
+            <a  href="{{ next_article.get_absolute_url }}" 
+                class="btn btn-info"
+                data-toggle="tooltip" data-placement="top" title="{{ next_article.title}}"
             >
-            {{ next_article.title }}
-        </a>
-    </div>
+                下一篇
+            </a>
+        </div>
     {% endif %}
-{% if pre_article %}
-    <div class="col-auto">
-        <a  href="{{ pre_article.get_absolute_url }}" 
-        class="btn btn-info" 
-        >
-            {{ pre_article.title }}
-        </a>
-    </div>
-{% endif %}
-</div>
+
+</div><br><hr><br>
             <div style="text-align:center;" class="mt-4">
                 <button class="btn btn-outline-danger"
                         type="button"
