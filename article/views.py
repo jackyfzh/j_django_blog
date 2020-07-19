@@ -52,7 +52,7 @@ def article_list(request):
     if order == 'likes':
         article_list = article_list.order_by('-likes')
 
-    paginator = Paginator(article_list, 18)
+    paginator = Paginator(article_list, 8)
     page = request.GET.get('page')
     articles = paginator.get_page(page)
 
