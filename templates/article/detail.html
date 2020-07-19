@@ -45,7 +45,14 @@
             <div class="col-12 alert alert-info">摘要：{{ article.main }}</div>
             <br>
             <div class="col-9">
-                <p>{{ article.body|safe  }}</p>
+                <style type="text/css">
+                #article_id > img {
+                    width: 100px
+                }
+                </style>
+                <div id="article_id">
+                    <p>{{ article.body|safe  }}</p>
+                </div>
             </div>
             <div class="col-3 mt-4 d-none d-lg-block" id="sidebar" class="sidebar">
                 <div class="sidebar__inner">
