@@ -46,12 +46,12 @@
             <br>
             <div class="col-9">
                 <style type="text/css">
-                    #article_id > img {
+                    #article_id > p > img {
                         width: 100px;
                     }
                 </style>
                 <div id="article_id">
-                    {{ article.body | safe  }}
+                    <p>{{ article.body|safe  }}</p>
                 </div>
             </div>
             <div class="col-3 mt-4 d-none d-lg-block" id="sidebar" class="sidebar">
