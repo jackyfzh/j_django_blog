@@ -24,7 +24,7 @@ Mako==1.1.2
 Markdown==3.2.2
 MarkupSafe==1.1.1
 Pillow==7.1.2
-Pygments==2.6.1
+Pygments==2.7.4
 python-dateutil==2.8.1
 python-editor==1.0.4
 pytz==2020.1
